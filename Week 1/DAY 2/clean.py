@@ -1,13 +1,14 @@
 
 import pandas as pd
 from rapidfuzz import process, fuzz
+import os
 
 
 # =========================================================
 # LOAD DATA
 # =========================================================
 
-def load_data(folder_path="Olist_Data"):
+def load_data(folder_path="../../Olist_Data"):
     """
     Loads all 8 Olist CSV files into a dictionary of DataFrames.
     Keeping them in a dictionary makes it easy to loop over every
@@ -295,7 +296,7 @@ def print_quality_report(before, after):
 # =========================================================
 
 if __name__ == "__main__":
-    df = load_data("Olist_Data")
+    df = load_data("../../Olist_Data")
 
     before_snapshot = get_quality_snapshot(df)
 
@@ -308,3 +309,9 @@ if __name__ == "__main__":
     after_snapshot = get_quality_snapshot(df)
 
     print_quality_report(before_snapshot, after_snapshot)
+
+
+    os.makedirs("../../cleaned_data", exist_ok=True)
+    for name, table in df.items():
+        table.to_csv(f"../../cleaned_data/{name}.csv", index=False)
+    print("saved cleaned tables to ../../cleaned_data/ folder")
