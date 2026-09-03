@@ -12,7 +12,10 @@ dependencies = [
     "pyarrow (>=25.0.1,<26.0.0)",
     "rapidfuzz (>=3.14.6,<4.0.0)",
     "sqlalchemy (>=2.0.52,<3.0.0)",
-    "psycopg2-binary (>=2.9.12,<3.0.0)"
+    "psycopg2-binary (>=2.9.12,<3.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "plotly (>=7.0.0,<8.0.0)",
+    "matplotlib (>=3.11.1,<4.0.0)"
 ]
 
 
