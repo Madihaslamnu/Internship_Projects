@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 Olist_Data/
+
+Week 1/DAY 5/final_model.joblib
