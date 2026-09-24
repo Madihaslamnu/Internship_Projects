@@ -1,0 +1,6 @@
+The baseline shows overfitting: training loss improved while validation performance stopped improving.
+The widening train-validation gap indicates that the model is learning training-specific patterns.
+The best checkpoint is selected at epoch 14 by minimum validation loss (0.0519).
+At that epoch, validation accuracy is 0.981 and macro-F1 is 0.975.
+Mean epoch time is 110.4 seconds and the model has 98,178 trainable parameters.
+Day 2 uses no augmentation; later comparisons must reuse this fixed split and input normalization.

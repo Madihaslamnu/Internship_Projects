@@ -1,0 +1,21 @@
+feature_name,description,source_columns,encoding_method
+date,Observation date,date,datetime
+store_nbr,Store identifier retained for traceability,store_nbr,raw categorical
+family,Product family retained for traceability,family,raw categorical
+store_nbr_frequency,Share of training rows belonging to this store,store_nbr,training-only frequency encoding
+family_frequency,Share of training rows belonging to this family,family,training-only frequency encoding
+store_family_frequency,Share of training rows for this store-family pair,"store_nbr, family",training-only frequency encoding
+year,Calendar year,date,date decomposition
+month,Calendar month,date,date decomposition
+day_of_week,Monday=0 through Sunday=6,date,date decomposition
+day_of_month,Day within the month,date,date decomposition
+week_of_year,ISO week number,date,date decomposition
+is_weekend,Whether the date is Saturday or Sunday,date,date decomposition
+is_month_start,Whether the date is the first day of its month,date,date decomposition
+is_month_end,Whether the date is the last day of its month,date,date decomposition
+is_holiday,Whether the date is an Ecuador public holiday,date,holidays.Ecuador
+holiday_name,"Ecuador holiday name, or empty string",date,holidays.Ecuador
+holiday_x_day_of_week,Holiday/week-day interaction,"is_holiday, day_of_week",multiplication
+onpromotion,Number of products on promotion,onpromotion,raw numeric
+onpromotion_sq,Squared promotion count for diminishing/increasing effects,onpromotion,second-degree polynomial
+sales,Forecast target,sales,raw target
