@@ -1,0 +1,23 @@
+{
+  "model": "smoke-test (random weights, ignore the numbers)",
+  "params_millions": 0.2,
+  "train_seconds": 1.6,
+  "hyperparameters": {
+    "epochs": 1,
+    "lr": 3e-05,
+    "batch_size": 32,
+    "max_len": 64,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "class_weights": false,
+    "seed": 42
+  },
+  "best_val_macro_f1": 0.1026,
+  "test": {
+    "accuracy": 0.23,
+    "macro_f1": 0.1247,
+    "f1_negative": 0.0,
+    "f1_neutral": 0.374,
+    "f1_positive": 0.0
+  }
+}
