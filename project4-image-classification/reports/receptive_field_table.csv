@@ -1,0 +1,10 @@
+layer,kernel,stride,jump,receptive_field,spatial_size
+input,-,-,1,1,128
+conv1,3,1,1,3,128
+pool1,2,2,2,4,64
+conv2,3,1,2,8,64
+pool2,2,2,4,10,32
+conv3,3,1,4,18,32
+pool3,2,2,8,22,16
+conv4,3,1,8,38,16
+pool4,2,2,16,46,8

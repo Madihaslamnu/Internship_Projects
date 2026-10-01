@@ -1,0 +1,2 @@
+Trace for store=1, family=GROCERY I, date=2013-02-10 00:00:00: all source rows have dates strictly before 2013-02-10 00:00:00; lag_1=[datetime.date(2013, 2, 9)], lag_7=[datetime.date(2013, 2, 3)], lag_28=[datetime.date(2013, 1, 13)]; rolling windows use only the preceding 7 or 28 sales values.
+The selected series shows a weekly seasonal component, while the trend captures the slower change in sales over time. The residual is the part not explained by those components; remaining spikes suggest promotions, holidays, or other covariates should be included by later models.

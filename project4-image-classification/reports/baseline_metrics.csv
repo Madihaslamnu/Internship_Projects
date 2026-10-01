@@ -1,0 +1,5 @@
+metric,value
+val_accuracy,0.9808917197452229
+val_macro_f1,0.9746296795044438
+mean_time_per_epoch_s,110.38746993500244
+trainable_parameters,98178.0
