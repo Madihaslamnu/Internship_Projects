@@ -1,10 +1,6 @@
-﻿@"
-.venv/
-**/.venv/
-venv/
+﻿.venv/
 __pycache__/
 *.pyc
 *.env
-**/model.safetensors
 *.joblib
-"@ | Out-File -Encoding utf8 .gitignore
+**/model.safetensors

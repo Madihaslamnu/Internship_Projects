@@ -1,0 +1,8 @@
+{
+  "model": "LLM API (Llama-3.3-70B-Versatile via Groq)",
+  "accuracy": 0.84,
+  "macro_f1": 0.7888,
+  "mean_latency_ms": 2153.71,
+  "p50_latency_ms": 2650.13,
+  "estimated_cost_per_1000_predictions_usd": 0.0295
+}

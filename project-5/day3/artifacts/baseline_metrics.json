@@ -1,0 +1,78 @@
+{
+  "n_train": 11541,
+  "n_test": 2886,
+  "models": {
+    "majority_class": {
+      "test": {
+        "accuracy": 0.6296,
+        "macro_f1": 0.2576,
+        "f1_negative": 0.7727,
+        "f1_neutral": 0.0,
+        "f1_positive": 0.0
+      }
+    },
+    "vader_lexicon": {
+      "test": {
+        "accuracy": 0.5492,
+        "macro_f1": 0.519,
+        "f1_negative": 0.6397,
+        "f1_neutral": 0.4319,
+        "f1_positive": 0.4856
+      }
+    },
+    "logreg": {
+      "cv_macro_f1": 0.7648,
+      "best_params": {
+        "clf__C": 3,
+        "clf__class_weight": "balanced",
+        "tfidf__min_df": 2,
+        "tfidf__ngram_range": [
+          1,
+          2
+        ]
+      },
+      "test": {
+        "accuracy": 0.8139,
+        "macro_f1": 0.7649,
+        "f1_negative": 0.8826,
+        "f1_neutral": 0.6645,
+        "f1_positive": 0.7476
+      }
+    },
+    "linear_svm": {
+      "cv_macro_f1": 0.7658,
+      "best_params": {
+        "clf__C": 0.3,
+        "clf__class_weight": "balanced",
+        "tfidf__min_df": 2,
+        "tfidf__ngram_range": [
+          1,
+          2
+        ]
+      },
+      "test": {
+        "accuracy": 0.8222,
+        "macro_f1": 0.7673,
+        "f1_negative": 0.8895,
+        "f1_neutral": 0.6649,
+        "f1_positive": 0.7475
+      }
+    }
+  },
+  "selected_by_cv": "linear_svm",
+  "oof_train": {
+    "accuracy": 0.8192,
+    "macro_f1": 0.7658,
+    "f1_negative": 0.8861,
+    "f1_neutral": 0.6614,
+    "f1_positive": 0.75
+  },
+  "final_test": {
+    "model": "linear_svm",
+    "accuracy": 0.8222,
+    "macro_f1": 0.7673,
+    "f1_negative": 0.8895,
+    "f1_neutral": 0.6649,
+    "f1_positive": 0.7475
+  }
+}

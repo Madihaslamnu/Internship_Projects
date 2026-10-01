@@ -1,0 +1,7 @@
+﻿/.venv/
+__pycache__/
+*.pyc
+/day3/artifacts/distilbert/checkpoints/
+/day3/artifacts/distilbert/model.safetensors
+/baseline_tfidf.joblib
+/day3/artifacts/baseline.joblib

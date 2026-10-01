@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "delta_macro_f1": 0.01944817127049292,
+    "delta_macro_f1_ci95": [
+      0.0022843937822044943,
+      0.03676001167950783
+    ],
+    "delta_accuracy": 0.015246015246015321,
+    "delta_accuracy_ci95": [
+      0.002425502425502435,
+      0.02806652806652799
+    ]
+  },
+  "mcnemar": {
+    "only_baseline_correct": 162,
+    "only_distilbert_correct": 206,
+    "p_value": 0.02485932899019162
+  },
+  "verdict": "DistilBERT beats the baseline (95% CI for the macro-F1 gain excludes 0)."
+}
