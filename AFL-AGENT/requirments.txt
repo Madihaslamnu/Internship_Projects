@@ -1,0 +1,16 @@
+streamlit
+langchain
+langgraph
+langchain-core
+langchain-groq
+langchain-chroma
+langchain-huggingface
+langchain-text-splitters
+sentence-transformers
+groq
+pydantic
+pandas
+numpy
+scikit-learn
+joblib
+requests
