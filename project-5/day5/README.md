@@ -65,7 +65,9 @@ The multi-stage Dockerfile installs runtime dependencies in a builder stage and 
 
 GitHub Actions runs Ruff, nine API/model tests, and a Docker build on pushes and pull requests. The model artifact uses Git LFS; CI checks out LFS content before testing and building.
 
-For Render, connect this repository and branch `main`, choose the **Docker** runtime, set root directory to `project-5`, Dockerfile path to `day5/Dockerfile`, Docker context to `.`, and health check path to `/health`. Then verify the public `/health`, `/docs`, and `/predict` endpoints. **Deployment status:** the repo and workflow are prepared; a public service URL still needs to be created in the hosting account.
+The service is deployed on Render at **[https://internship-projects-uyfv.onrender.com](https://internship-projects-uyfv.onrender.com)**. The live `/health` endpoint returns HTTP 200, and a live `/predict` request returned `positive` for “The crew was kind and helpful.” Open `/docs` to explore the API. A free Render instance may sleep when idle, so its first request after inactivity can take longer.
+
+Deployment settings: Docker runtime, root directory `project-5`, Dockerfile path `day5/Dockerfile`, Docker context `.`, and health check path `/health`. The service does not require application secrets.
 
 ## Limitations and next steps
 
