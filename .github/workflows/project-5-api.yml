@@ -1,0 +1,35 @@
+name: Project 5 API CI
+
+on:
+  push:
+    paths:
+      - "project-5/**"
+      - ".github/workflows/project-5-api.yml"
+  pull_request:
+    paths:
+      - "project-5/**"
+      - ".github/workflows/project-5-api.yml"
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: project-5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: project-5/day5/requirements-dev.txt
+      - run: python -m pip install -r day5/requirements-dev.txt
+      - run: ruff check day5/fast_api.py day5/build_drift_baseline.py day5/tests
+      - run: python -m pytest -q day5/tests
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v6
+        with:
+          context: project-5
+          file: project-5/day5/Dockerfile
+          push: false
+          tags: airline-sentiment-api:ci

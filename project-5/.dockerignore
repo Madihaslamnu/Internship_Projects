@@ -1,0 +1,17 @@
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+**/*.pyc
+.venv
+api_key.env
+day1.ipynb
+day2.ipynb
+day3/data
+day3/artifacts/distilbert
+day3/artifacts/*.csv
+day3/artifacts/*.json
+day4
+day5/artifacts
+day5/tests
+day5/README.md
+day5/requirements-dev.txt
